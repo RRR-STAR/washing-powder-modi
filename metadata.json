@@ -1,0 +1,6 @@
+{
+  "name": "Modi Washing Powder Store",
+  "description": "Satirical cartoon e-commerce store for Modi Washing Powder with custom pack configuration, washing simulator, and playful animated checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

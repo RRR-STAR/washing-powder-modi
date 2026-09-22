@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  h1, h2, h3, .font-comic {
+    font-family: 'Fredoka', cursive, sans-serif;
+  }
+  .font-bungee {
+    font-family: 'Bungee', cursive, sans-serif;
+  }
+}
+
+/* Cartoon neo-brutalist styling */
+.cartoon-card {
+  border: 3.5px solid #1e293b;
+  box-shadow: 6px 6px 0px #0f172a;
+}
+
+.cartoon-card-sm {
+  border: 2.5px solid #1e293b;
+  box-shadow: 4px 4px 0px #0f172a;
+}
+
+.cartoon-card-lg {
+  border: 4px solid #0f172a;
+  box-shadow: 8px 8px 0px #0f172a;
+}
+
+.cartoon-btn {
+  border: 3px solid #1e293b;
+  box-shadow: 4px 4px 0px #0f172a;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cartoon-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #0f172a;
+}
+
+.cartoon-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #0f172a;
+}
+
+/* Floating bubble animation */
+@keyframes floatBubble {
+  0% {
+    transform: translateY(100%) scale(0.6);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-120%) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-float-bubble {
+  animation: floatBubble linear infinite;
+}
+
+/* Halftone / comic dots pattern */
+.comic-dots-bg {
+  background-image: radial-gradient(#fb923c 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.comic-dots-blue {
+  background-image: radial-gradient(#38bdf8 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
