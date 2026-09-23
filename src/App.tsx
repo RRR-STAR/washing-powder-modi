@@ -105,14 +105,6 @@ export default function App() {
           <h1 className="font-bungee text-3xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-none">
             WASHING POWDER <span className="text-orange-600 underline decoration-yellow-400 decoration-wavy decoration-3">MODI</span>
           </h1>
-          
-          <h3 className="font-bungee text-slate-900 tracking-tight leading-none">
-            {/* The first letters are text-5xl, the rest are text-3xl */}
-            <span className="text-5xl">W</span><span className="text-3xl">ash </span>
-            <span className="text-orange-600 text-5xl">O</span><span className="text-orange-600 text-3xl">nce </span>
-            <span className="text-5xl">C</span><span className="text-3xl">lean </span>
-            <span className="text-orange-600 text-5xl">F</span><span className="text-orange-600 text-3xl">orever</span>
-          </h3>
 
           <p className="font-hindi text-lg sm:text-2xl text-blue-900 font-extrabold max-w-2xl mx-auto">
             दूध सी सफेदी, खादी में आए • रंग-बिरंगे घोटाले सब धुल जाए!
