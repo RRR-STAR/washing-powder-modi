@@ -9,6 +9,7 @@ import { PackSize, FormulaOption, StainOption, ScamEntry } from './types';
 import { PACK_SIZES, FORMULA_OPTIONS, STAIN_OPTIONS } from './data/memeData';
 import { AudioJingleBar } from './components/AudioJingleBar';
 import { Navbar } from './components/Navbar';
+import { MemeVideoPlayer } from './components/MemeVideoPlayer';
 import { WashingPowderPacket } from './components/WashingPowderPacket';
 import { ProductConfigurator } from './components/ProductConfigurator';
 import { WashingMachineSimulator } from './components/WashingMachineSimulator';
@@ -104,6 +105,14 @@ export default function App() {
           <h1 className="font-bungee text-3xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-none">
             WASHING POWDER <span className="text-orange-600 underline decoration-yellow-400 decoration-wavy decoration-3">MODI</span>
           </h1>
+          
+          <h3 className="font-bungee text-slate-900 tracking-tight leading-none">
+            {/* The first letters are text-5xl, the rest are text-3xl */}
+            <span className="text-5xl">W</span><span className="text-3xl">ash </span>
+            <span className="text-orange-600 text-5xl">O</span><span className="text-orange-600 text-3xl">nce </span>
+            <span className="text-5xl">C</span><span className="text-3xl">lean </span>
+            <span className="text-orange-600 text-5xl">F</span><span className="text-orange-600 text-3xl">orever</span>
+          </h3>
 
           <p className="font-hindi text-lg sm:text-2xl text-blue-900 font-extrabold max-w-2xl mx-auto">
             दूध सी सफेदी, खादी में आए • रंग-बिरंगे घोटाले सब धुल जाए!
@@ -114,6 +123,11 @@ export default function App() {
           </p>
         </section>
 
+        {/* VIRAL MEME VIDEO PLAYER - Placed directly at the home before the selected configurator div */}
+        <section id="meme-video-section" className="w-full max-w-3xl mx-auto">
+          <MemeVideoPlayer />
+        </section>
+
         {/* HERO CONFIGURATOR SECTION: Packet Live Visual + Options */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Left Column: Interactive Packet (Sticky on desktop) */}
@@ -122,7 +136,7 @@ export default function App() {
               packSize={selectedPack}
               formula={selectedFormula}
               selectedStainsCount={selectedStains.length}
-              onPacketClick={() => sound.playDrumBeat()}
+              onPacketClick={() => sound.playLaughableModiGroove()}
             />
 
             <div className="mt-4 text-center">

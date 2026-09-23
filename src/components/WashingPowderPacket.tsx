@@ -28,12 +28,12 @@ export const WashingPowderPacket: React.FC<WashingPowderPacketProps> = ({
 }) => {
   const [isWobbling, setIsWobbling] = useState(false);
 
-  // Trigger playful bounce and drum sound on interaction
+  // Trigger playful bounce and laughable drum sound on interaction
   const handleInteract = () => {
     setIsWobbling(true);
-    sound.playDrumBeat();
+    sound.playLaughableModiGroove();
     sound.playBubblePop();
-    setTimeout(() => setIsWobbling(false), 600);
+    setTimeout(() => setIsWobbling(false), 800);
     if (onPacketClick) {
       onPacketClick();
     }

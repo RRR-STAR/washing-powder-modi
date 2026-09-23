@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Volume2, VolumeX, Drum, Music, Sparkles } from 'lucide-react';
+import { Volume2, VolumeX, Drum, Music, Sparkles, Laugh } from 'lucide-react';
 import { sound } from '../utils/audio';
 import { JINGLE_LYRICS } from '../data/memeData';
 
@@ -26,13 +26,14 @@ export const AudioJingleBar: React.FC = () => {
 
   const handleModiDrumSolo = () => {
     setIsPlayingDholak(true);
-    sound.playDrumPattern();
-    setTimeout(() => {
-      sound.playDrumPattern();
-    }, 600);
+    sound.playLaughableModiGroove();
     setTimeout(() => {
       setIsPlayingDholak(false);
-    }, 1200);
+    }, 1300);
+  };
+
+  const handlePlayJingleHook = () => {
+    sound.playModiWashingJingleTune();
   };
 
   return (
@@ -53,8 +54,19 @@ export const AudioJingleBar: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Sound Controls & Drum Solo Button */}
-        <div className="flex items-center gap-2 shrink-0">
+        {/* Right: Sound Controls & Laughable Audio Buttons */}
+        <div className="flex flex-wrap items-center gap-2 shrink-0">
+          <button
+            type="button"
+            id="jingle-tune-button"
+            onClick={handlePlayJingleHook}
+            className="px-2.5 py-1 rounded-full text-xs font-black cartoon-btn bg-white hover:bg-yellow-200 text-slate-900 flex items-center gap-1 cursor-pointer"
+            title="Sing Washing Powder Modi jingle melody"
+          >
+            <Music className="w-3.5 h-3.5 text-blue-600" />
+            <span>Sing Jingle!</span>
+          </button>
+
           <button
             type="button"
             id="drum-solo-button"
@@ -62,11 +74,12 @@ export const AudioJingleBar: React.FC = () => {
             className={`px-3 py-1 rounded-full text-xs font-black cartoon-btn flex items-center gap-1.5 cursor-pointer ${
               isPlayingDholak
                 ? 'bg-red-500 text-white animate-pulse'
-                : 'bg-white hover:bg-amber-100 text-slate-900'
+                : 'bg-orange-500 hover:bg-orange-400 text-white'
             }`}
+            title="Play Modi Dholak Drum Groove"
           >
-            <Drum className="w-3.5 h-3.5 text-orange-600" />
-            <span>{isPlayingDholak ? 'Drumming!' : 'Play Modi Drum Beat'}</span>
+            <Drum className="w-3.5 h-3.5 text-yellow-300" />
+            <span>{isPlayingDholak ? '🥁 Dhol Dhamaal!' : 'Dhol Beat'}</span>
           </button>
 
           <button
@@ -87,3 +100,4 @@ export const AudioJingleBar: React.FC = () => {
     </div>
   );
 };
+
